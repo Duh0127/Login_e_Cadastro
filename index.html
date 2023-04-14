@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login and Register</title>
+</head>
+<body>
+    
+    <header>
+        <h2 class="logo">EDU</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contatos</a>
+            <button class="btn">Login</button>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <div class="fechar">
+            <ion-icon name="close"></ion-icon>
+        </div>
+
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+
+                <div class="input-box">
+                    <span class="icon"> 
+                        <ion-icon name="mail"></ion-icon> 
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"> 
+                        <ion-icon name="lock-closed"></ion-icon> 
+                    </span>
+                    <input type="password" required>
+                    <label>Senha</label>
+                </div>
+
+                <div class="relembrar">
+                    <label>
+                        <input type="checkbox">
+                        Relembrar dados
+                    </label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+
+                <div class="cadastrar-login">
+                    <p>Não tem uma conta?<a href="#" class="">Cadastre</a></p>
+                </div>
+            </form>
+        </div>
+
+
+
+        <div class="form-box cadastro">
+            <h2>Cadastro</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"> <ion-icon name="person"></ion-icon> </span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"> 
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"> 
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Senha</label>
+                </div>
+                <div class="relembrar">
+                    <label>
+                        <input type="checkbox">
+                        Aceito os termos & condições
+                    </label>
+                </div>
+    
+                <button type="submit" class="btn">Cadastrar</button>
+    
+                <div class="login-link">
+                    <p>Ja possui uma conta?<a href="#" class="">Login</a></p>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+
+    
+
+
+
+    <script src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

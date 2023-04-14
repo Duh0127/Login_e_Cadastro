@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(./sea-164989.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo{
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;    
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .4s;
+}
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btn{
+    width: 130px;
+    height: 50px;
+    margin-left: 40px;
+    border: 2px solid white;
+    border-radius: 6px;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navigation .btn:hover{
+    background-color: white;
+    color: #000;
+}
+
+
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 400px;
+    height: 440px;
+    border: 2px solid #ffffff82;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.container.popup{
+    transform: scale(1);
+    transition: .35s ease;
+}
+
+
+
+.container.active{
+    height: 520px;
+}
+
+
+.container .fechar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5em;
+    background-color: #00000075;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 20px 0 15px;
+    cursor: pointer;
+}
+
+.container .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+
+
+.container .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.container.active .form-box.login{
+    position: absolute;
+    transform: translateX(-400px);
+    transform: scaleY(100px);
+}
+
+
+.container .form-box.cadastro{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.container.active .form-box.cadastro{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+
+.form-box.login{
+    margin-top: 40px;
+}
+.form-box.cadastro{
+    margin-top: 60px;
+}
+
+.form-box h2{
+    font-size: 2em;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #000;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #000;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #000;
+    line-height: 57px;
+}
+
+
+
+
+.relembrar{
+    font-size: .9em;
+    color: #000;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.relembrar label input{
+    accent-color: #000;
+    margin-right: 3px;
+}
+.relembrar a{
+    text-decoration: none;
+    color: #000;
+}
+.relembrar a:hover{
+    text-decoration: underline;
+}
+
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background-color: #000;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+
+.cadastrar-login{
+    font-size: .9em;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.cadastrar-login p a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.cadastrar-login p a:hover{
+    text-decoration: underline;
+}
+
+
+.login-link{
+    font-size: .9em;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-link p a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.login-link p a:hover{
+    text-decoration: underline;
+}
